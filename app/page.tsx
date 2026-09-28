@@ -3,12 +3,13 @@ import Link from "next/link";
 import { ArrowRight, CalendarDays, Clock3, MapPin, Music2 } from "@/components/icons";
 import { ContactStrip } from "@/components/contact-strip";
 import { formatEventDate, springHeat } from "@/lib/events";
+import { assetPath } from "@/lib/paths";
 
 export default function Home() {
   return (
     <main>
       <section className="hero">
-        <Image className="hero-image" src="/images/goldcode-hero.png" alt="A joyful crowd dancing around a DJ at an elegant African music event" fill priority sizes="100vw" />
+        <Image className="hero-image" src={assetPath("/images/goldcode-hero.png")} alt="A joyful crowd dancing around a DJ at an elegant African music event" fill priority sizes="100vw" />
         <div className="hero-overlay" />
         <div className="hero-content">
           <p className="kicker">Auckland · Aotearoa</p>
@@ -47,7 +48,7 @@ export default function Home() {
       </section>
 
       <section className="home-gallery">
-        <div className="gallery-image"><Image src="/images/goldcode-hero.png" alt="GoldCode event atmosphere" fill sizes="70vw" /><div><p className="kicker">Past events</p><h2>A taste of<br />the last link up.</h2><Link href="/gallery">View the gallery →</Link></div></div>
+        <div className="gallery-image"><Image src={assetPath("/images/goldcode-hero.png")} alt="GoldCode event atmosphere" fill sizes="70vw" /><div><p className="kicker">Past events</p><h2>A taste of<br />the last link up.</h2><Link href="/gallery">View the gallery →</Link></div></div>
         <div className="gallery-pattern"><span>Rhythm</span><span>Culture</span><span>Connection</span></div>
       </section>
       <ContactStrip />

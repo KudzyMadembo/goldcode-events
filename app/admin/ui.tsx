@@ -20,7 +20,7 @@ export function AdminDashboard() {
   async function signIn(event: FormEvent) {
     event.preventDefault();
     if (!supabase) return;
-    const { error } = await supabase.auth.signInWithOtp({ email, options: { emailRedirectTo: `${window.location.origin}/admin` } });
+    const { error } = await supabase.auth.signInWithOtp({ email, options: { emailRedirectTo: window.location.href } });
     setMessage(error ? error.message : "Check your email for a secure sign-in link.");
   }
 

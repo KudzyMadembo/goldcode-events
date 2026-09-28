@@ -1,4 +1,5 @@
 import { GoldCodeEvent } from "./types";
+import { assetPath } from "./paths";
 
 export const springHeat: GoldCodeEvent = {
   id: "spring-heat-2026",
@@ -14,7 +15,7 @@ export const springHeat: GoldCodeEvent = {
   city: "Auckland",
   ageRestriction: "R18 — valid photo ID required",
   ticketUrl: "https://events.humanitix.com/africa-to-aotearoa-the-link-up-spring-heat",
-  imageUrl: "/images/goldcode-hero.png",
+  imageUrl: assetPath("/images/goldcode-hero.png"),
   status: "low_availability",
   publishState: "published",
 };

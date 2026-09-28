@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "./icons";
+import { assetPath } from "@/lib/paths";
 
 const links = [
   ["/events", "Events"],
@@ -19,7 +20,7 @@ export function Header() {
   return (
     <header className="site-header" style={pathname.startsWith("/admin") ? { background: "#07110f" } : undefined}>
       <Link className="brand" href="/" aria-label="GoldCode Events home">
-        <Image src="/images/goldcode-logo.png" alt="GoldCode Events" width={120} height={120} priority />
+        <Image src={assetPath("/images/goldcode-logo.png")} alt="GoldCode Events" width={120} height={120} priority />
       </Link>
       <nav className={open ? "nav-open" : ""} aria-label="Primary navigation">
         {links.map(([href, label]) => (
