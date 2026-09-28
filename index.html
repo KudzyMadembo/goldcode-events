@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="GoldCode Events brings African sounds, culture and connection to Aotearoa."
+    />
+    <title>GoldCode Events | Uniting cultures through music</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Italiana&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <a class="brand" href="#top" aria-label="GoldCode Events home">
+        <img src="GoldCode logo.PNG" alt="GoldCode Events" />
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span>
+        <span class="sr-only">Open menu</span>
+      </button>
+      <nav id="site-nav" aria-label="Primary navigation">
+        <a href="#events">Events</a>
+        <a href="#story">Our story</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="button button-small header-cta" href="#events">Get tickets</a>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <img class="hero-image" src="assets/goldcode-hero.png" alt="Guests dancing at a GoldCode music event" />
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Auckland · Aotearoa</p>
+          <h1 id="hero-title">Uniting cultures<br />through music.</h1>
+          <p class="hero-lede">African sounds. Unforgettable nights. One community.</p>
+          <div class="hero-actions">
+            <a class="button" href="#events">Explore events <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#contact">Work with us <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="hero-note" aria-hidden="true">
+          <span>01</span><span class="line"></span><span>GoldCode Events</span>
+        </div>
+      </section>
+
+      <section class="event-band" id="events" aria-labelledby="event-title">
+        <div class="event-art" aria-hidden="true">
+          <span class="continent">AFRICA</span>
+          <span class="route"></span>
+          <span class="destination">AOTEAROA</span>
+        </div>
+        <div class="event-copy">
+          <p class="eyebrow"><span class="live-dot"></span> Up next</p>
+          <p class="series">Africa to Aotearoa presents</p>
+          <h2 id="event-title">The Link Up</h2>
+          <p class="event-tagline">A night of Afrobeats, Amapiano and global sounds.</p>
+          <dl class="event-details">
+            <div><dt>Date</dt><dd>Coming soon</dd></div>
+            <div><dt>City</dt><dd>Auckland</dd></div>
+            <div><dt>Venue</dt><dd>To be announced</dd></div>
+          </dl>
+          <a class="button ticket-button" href="#contact">Join the guest list <span aria-hidden="true">↗</span></a>
+          <p class="ticket-note">Humanitix ticket link coming soon</p>
+        </div>
+      </section>
+
+      <section class="story" id="story" aria-labelledby="story-title">
+        <div class="story-heading">
+          <p class="eyebrow">Our story</p>
+          <h2 id="story-title">From the rhythm<br />to the room.</h2>
+        </div>
+        <div class="story-copy">
+          <p class="lead">GoldCode Events creates spaces where African music feels at home in Aotearoa.</p>
+          <p>Born from a love of sound, culture and meaningful connection, our nights bring people together across borders and backgrounds. Africa to Aotearoa is our signature series: a celebration of the music moving the continent and the diaspora.</p>
+          <a class="text-link" href="#contact">Come build with us <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+
+      <section class="gallery" id="gallery" aria-labelledby="gallery-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">The energy</p>
+            <h2 id="gallery-title">Moments that stay.</h2>
+          </div>
+          <p>Real photos from GoldCode nights will live here.</p>
+        </div>
+        <div class="gallery-grid">
+          <figure class="gallery-main">
+            <img src="assets/goldcode-hero.png" alt="A lively dance floor at an African music event" />
+            <figcaption><span>On the floor</span><span>01</span></figcaption>
+          </figure>
+          <div class="gallery-placeholder pattern-one">
+            <span>Past event photography</span>
+          </div>
+          <div class="gallery-placeholder pattern-two">
+            <span>DJs · Artists · Community</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="collaborate" id="contact" aria-labelledby="contact-title">
+        <p class="eyebrow">Work with GoldCode</p>
+        <h2 id="contact-title">Artists. Agents.<br />Venues. Collaborators.</h2>
+        <p>We’re building unforgettable cultural experiences across Aotearoa. Let’s make the next one together.</p>
+        <a class="button button-light" href="mailto:hello@goldcodeevents.co.nz">Start a conversation <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-brand">GoldCode <span>Events</span></div>
+      <p>African sounds. Aotearoa nights.</p>
+      <div class="footer-links">
+        <a href="#top">Back to top ↑</a>
+        <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram ↗</a>
+      </div>
+      <p class="copyright">© <span id="year"></span> GoldCode Events</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
