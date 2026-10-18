@@ -1,8 +1,8 @@
 name: Deploy to GitHub Pages
 
+# The site now renders from Supabase at request time (see docs/adr/0002), so
+# there is no static `out` folder to publish. Kept for manual runs only.
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:

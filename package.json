@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@supabase/server": "^1.9.2",
     "@supabase/ssr": "latest",
     "@supabase/supabase-js": "latest",
     "lucide-react": "latest",

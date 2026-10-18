@@ -5,3 +5,4 @@ out
 .vercel
 .sites-runtime
 *.log
+tsconfig.tsbuildinfo

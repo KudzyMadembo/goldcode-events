@@ -1,26 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CalendarDays, MapPin } from "./icons";
-import { formatEventDate, statusLabels } from "@/lib/events";
+import { CalendarDays } from "./icons";
 import { GoldCodeEvent } from "@/lib/types";
 
-export function EventCard({ event }: { event: GoldCodeEvent }) {
-  const unavailable = ["sold_out", "cancelled", "postponed"].includes(event.status);
+export function EventCard({ event, priority = false }: { event: GoldCodeEvent; priority?: boolean }) {
   return (
     <article className="event-card">
-      <div className="event-card-image">
-        <Image src={event.imageUrl} alt="Guests dancing at a GoldCode event" fill sizes="(max-width: 800px) 100vw, 50vw" />
-        <span className={`status ${event.status}`}>{statusLabels[event.status]}</span>
-      </div>
+      {event.imageUrl && (
+        <div className="event-card-image">
+          <Image src={event.imageUrl} alt="Guests dancing and toasting at the bar during Curated Nights" fill priority={priority} sizes="(max-width: 800px) 100vw, 50vw" />
+        </div>
+      )}
       <div className="event-card-body">
-        <p className="kicker">{event.series}</p>
-        <h2>{event.name}</h2>
-        <p className="meta"><CalendarDays size={17} /> {formatEventDate(event.startsAt)} · 9:30 PM–3:00 AM</p>
-        <p className="meta"><MapPin size={17} /> {event.venue}, {event.city}</p>
-        <p>{event.description}</p>
+        <p className="kicker">{event.past ? "Past night" : "GoldCode Events presents"}</p>
+        <h2>{event.title}</h2>
+        <p className="meta"><CalendarDays size={17} /> {event.placeLine}</p>
+        <p>{event.paragraphs[0]}</p>
         <div className="card-actions">
           <Link className="text-link" href={`/events/${event.slug}`}>Event details <span>→</span></Link>
-          {!unavailable && <a className="button" href={event.ticketUrl} target="_blank" rel="noreferrer">Get tickets <span>↗</span></a>}
+          {event.ticketUrl && <a className="button" href={event.ticketUrl} target="_blank" rel="noreferrer">Get tickets <span>↗</span></a>}
         </div>
       </div>
     </article>

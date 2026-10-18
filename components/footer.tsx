@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Camera } from "./icons";
 
 export function Footer() {
@@ -16,7 +15,7 @@ export function Footer() {
       </div>
       <div className="footer-bottom">
         <span>© {new Date().getFullYear()} GoldCode Events</span>
-        <Link href="/admin">Admin</Link>
+        <a className="footer-credit" href="https://codespecs.net" target="_blank" rel="noreferrer">Designed by <span>codespecs.net</span></a>
       </div>
     </footer>
   );

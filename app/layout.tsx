@@ -1,19 +1,24 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { assetPath } from "@/lib/paths";
+import { featuredEvent, loadPublishedEvents } from "@/lib/catalog";
+import { homeTitle, siteUrl } from "@/lib/site";
 import "./globals.css";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
-  title: { default: "GoldCode Events | Uniting cultures through music", template: "%s | GoldCode Events" },
-  description: "Premium African music events connecting cultures across Aotearoa.",
-  icons: { icon: assetPath("/favicon.svg") },
+  metadataBase: new URL(siteUrl),
+  title: { default: homeTitle, template: "%s | GoldCode Events" },
+  icons: { icon: `${siteUrl}/favicon.svg` },
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const events = await loadPublishedEvents();
+  const featured = featuredEvent(events);
   return (
     <html lang="en">
-      <body><Header />{children}<Footer /></body>
+      <body><Header ticketUrl={featured?.ticketUrl ?? ""} />{children}<Footer /></body>
     </html>
   );
 }
