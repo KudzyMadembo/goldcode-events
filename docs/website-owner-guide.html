@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>GoldCode Events — Website owner's guide</title>
+<style>
+  @page { size: A4; margin: 18mm 16mm 20mm; }
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { margin: 0; color: #1c2420; font-family: "Segoe UI", Aptos, Arial, sans-serif; font-size: 10.5pt; line-height: 1.5; }
+  h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 500; line-height: 1.15; color: #10201a; }
+  h1 { margin: 0 0 6px; font-size: 28pt; }
+  h2 { margin: 26px 0 8px; padding-top: 4px; font-size: 16pt; page-break-after: avoid; }
+  h3 { margin: 16px 0 4px; font-size: 12.5pt; page-break-after: avoid; }
+  p { margin: 0 0 8px; }
+  a { color: #7a5316; text-decoration: none; }
+  strong { font-weight: 650; }
+  code { font-family: Consolas, "Segoe UI Mono", monospace; font-size: .92em; background: #f3eee4; padding: 0 3px; }
+  ul, ol { margin: 4px 0 10px; padding-left: 20px; }
+  li { margin: 2px 0; }
+  li::marker { color: #8c6327; }
+
+  header.cover { display: flex; align-items: center; gap: 16px; padding-bottom: 16px; border-bottom: 2px solid #8c6327; }
+  header.cover img { width: 58px; height: 58px; }
+  header.cover .brand { letter-spacing: 3px; text-transform: uppercase; color: #8c6327; font-size: 9pt; font-weight: 700; }
+  header.cover h1 { margin-top: 2px; }
+  .meta { margin: 10px 0 0; color: #5c675f; font-size: 9.5pt; }
+  .lede { margin-top: 14px; max-width: 62ch; }
+
+  table { width: 100%; border-collapse: collapse; margin: 8px 0 14px; font-size: 9.5pt; }
+  tr { break-inside: avoid; }
+  th, td { text-align: left; vertical-align: top; padding: 6px 8px; border-bottom: 1px solid #e4ddd0; }
+  th { background: #10201a; color: #f4efe6; font-weight: 600; font-size: 8.5pt; letter-spacing: .4px; text-transform: uppercase; }
+  tr:nth-child(even) td { background: #faf7f1; }
+  td:first-child { font-weight: 650; }
+
+  .callout { margin: 10px 0 14px; padding: 10px 14px; background: #f6f1e6; border-left: 3px solid #8c6327; page-break-inside: avoid; }
+  .step { page-break-inside: avoid; }
+  footer.note { margin-top: 28px; padding-top: 10px; border-top: 1px solid #e4ddd0; color: #6b756f; font-size: 8.5pt; }
+</style>
+</head>
+<body>
+<header class="cover">
+  <img src="../public/images/goldcode-logo.png" alt="GoldCode Events" />
+  <div>
+    <div class="brand">GoldCode Events</div>
+    <h1>Website owner's guide</h1>
+  </div>
+</header>
+<p class="meta">Standard operating procedures for running goldcodeevents.com &nbsp;·&nbsp; Version 1 &nbsp;·&nbsp; October 2026 &nbsp;·&nbsp; Prepared by codespecs.net</p>
+
+<h2>1. What you control</h2>
+<p>The website has one private area, the <strong>manager page</strong>, at <strong>goldcodeevents.com/admin</strong>. From there you manage everything about your nights.</p>
+<table>
+  <thead><tr><th>You can change</th><th>You cannot change — ask your developer</th></tr></thead>
+  <tbody>
+    <tr><td>Event title, short name, series</td><td>Homepage headlines and brand lines</td></tr>
+    <tr><td>The story paragraphs for each night</td><td>The About page</td></tr>
+    <tr><td>Date, start and end time</td><td>Footer, contact details, social links</td></tr>
+    <tr><td>Venue, address, city, age note</td><td>Colours, fonts, layout</td></tr>
+    <tr><td>Humanitix ticket link and ticket status</td><td>Logo</td></tr>
+    <tr><td>Up to ten photographs per night, with captions and order</td><td></td></tr>
+    <tr><td>Whether a night is Published or a Draft</td><td></td></tr>
+    <tr><td>Whether a night is Upcoming or Past</td><td></td></tr>
+  </tbody>
+</table>
+<div class="callout">Everything you save on the manager page is live on the public site within a few seconds. There is no separate “publish website” step.</div>
+
+<h2>2. Signing in</h2>
+<ol>
+  <li>Go to <strong>goldcodeevents.com/admin</strong>.</li>
+  <li>Enter the username and password you were given separately. Never put them in an email, a group chat or this document.</li>
+  <li>Click <strong>Sign in</strong>.</li>
+</ol>
+<p>When you are finished, click <strong>Sign out</strong> at the top right, especially on a shared or borrowed computer.</p>
+<p>If you forget the password, contact your developer. Do not create extra accounts; the site is built for one manager account.</p>
+
+<h2>3. Reading the manager page</h2>
+<p>At the top you see three counters: <strong>Published</strong>, <strong>Drafts</strong> and <strong>Photographs</strong>.</p>
+<p>Below is the list of nights. Each row shows the night's title, its date and venue line, and three badges:</p>
+<ul>
+  <li><strong>Published</strong> or <strong>Draft</strong> — whether the public can see it.</li>
+  <li><strong>Upcoming</strong> or <strong>Past</strong> — which section of the site it appears in.</li>
+  <li><strong>n/10 photos</strong> — how many photographs it has.</li>
+</ul>
+<p>Click a row to open it. Click it again to close it.</p>
+
+<h2>4. Procedures</h2>
+
+<h3>4.1 Announce a new night</h3>
+<ol class="step">
+  <li>Click <strong>New night</strong>.</li>
+  <li>Fill in <strong>Title</strong> (the full name, e.g. <em>Africa to Aotearoa: The Link Up – Summer Edition</em>) and <strong>Short name</strong> (how you say it casually, e.g. <em>The Link Up – Summer Edition</em>).</li>
+  <li>Optionally paste the first version of the <strong>Story</strong>.</li>
+  <li>Click <strong>Create draft</strong>. The night is created as a <strong>Draft</strong> — the public cannot see it yet.</li>
+  <li>Open the new night in the list and complete the rest of the form (see 4.2).</li>
+  <li>When it is ready, set <strong>Visibility</strong> to <strong>Published</strong> and click <strong>Save night</strong>.</li>
+</ol>
+<p>A published upcoming night appears on the Events page. The soonest upcoming night also becomes the headline event on the homepage and controls the <strong>Get tickets</strong> button in the top bar.</p>
+
+<h3>4.2 Fill in or edit a night</h3>
+<p>Open the night and work down the form.</p>
+<table>
+  <thead><tr><th>Field</th><th>What to put in it</th></tr></thead>
+  <tbody>
+    <tr><td>Title</td><td>Required. Full event name as it should appear in headings.</td></tr>
+    <tr><td>Short name</td><td>Required. Shorter name used in lists and photo groups.</td></tr>
+    <tr><td>Series</td><td>The series it belongs to, e.g. Africa to Aotearoa. Leave empty for a one-off.</td></tr>
+    <tr><td>Place line</td><td>The one-line summary under the title on the Events page. Use the pattern <code>30 May 2026 | Cassette Nine, Auckland</code>. The bar <code>|</code> separates the date from the venue. For a night with no fixed date yet, write just the venue or city.</td></tr>
+    <tr><td>Story</td><td>The paragraphs visitors read. Press Enter twice between paragraphs. Two or three paragraphs is right; the first one is also used as the opening line on the homepage.</td></tr>
+    <tr><td>Search description</td><td>One plain sentence describing the night. Google shows this under the link. Keep it under about 160 characters.</td></tr>
+    <tr><td>Starts / Ends</td><td>Date and time in Auckland time. These power the “Doors 9:30 pm–3:00 am” line and the big date on the Events page.</td></tr>
+    <tr><td>This night has passed</td><td>Tick this after the night has happened (see 4.5).</td></tr>
+    <tr><td>Venue / City / Address</td><td>Venue name, city, and street address.</td></tr>
+    <tr><td>Humanitix link</td><td>Paste the full event link from Humanitix (starts with <code>https://events.humanitix.com/</code>). Leave empty and the Get tickets button is hidden for that night.</td></tr>
+    <tr><td>Age note</td><td>e.g. R18 — valid photo ID required.</td></tr>
+    <tr><td>Ticket status</td><td>Choose one: Coming soon, Tickets available, Early bird nearly gone, Sold out, Postponed, Cancelled. Shown next to the ticket button.</td></tr>
+    <tr><td>Visibility</td><td>Published = live. Draft = hidden from the public.</td></tr>
+  </tbody>
+</table>
+<p>Click <strong>Save night</strong>. “Saved.” appears under the button when it has worked. If something is wrong, a red message explains what to fix. After saving a published night, click <strong>View the public page</strong> to check how it looks.</p>
+
+<h3>4.3 Put tickets on sale</h3>
+<ol class="step">
+  <li>Create the event on Humanitix and copy its public link.</li>
+  <li>Open the night, paste the link into <strong>Humanitix link</strong>.</li>
+  <li>Set <strong>Ticket status</strong> to <strong>Tickets available</strong>.</li>
+  <li>Click <strong>Save night</strong>.</li>
+</ol>
+<p>The button appears on that night's page, on the Events page, and — if it is the soonest upcoming night — in the top bar of every page.</p>
+<p>Sold out? Change <strong>Ticket status</strong> to <strong>Sold out</strong> and save. Leave the link in place so people can still reach the Humanitix page for waitlists.</p>
+
+<h3>4.4 Postpone or cancel</h3>
+<ul>
+  <li>Set <strong>Ticket status</strong> to <strong>Postponed</strong> or <strong>Cancelled</strong> and save. The night stays visible with that label.</li>
+  <li>When a new date is confirmed, update <strong>Starts</strong>, <strong>Ends</strong> and <strong>Place line</strong>, set status back to <strong>Tickets available</strong>, and save.</li>
+  <li>To hide a night completely, set <strong>Visibility</strong> to <strong>Draft</strong>. Nothing is deleted; you can publish it again later.</li>
+</ul>
+
+<h3>4.5 After the night: mark it past and add photographs</h3>
+<p>Do this within a week of the event so the site keeps looking current.</p>
+<ol class="step">
+  <li>Open the night.</li>
+  <li>Tick <strong>This night has passed</strong>.</li>
+  <li>Change the first paragraph of the <strong>Story</strong> from future tense to past tense if needed (“returns” → “brought”).</li>
+  <li>Click <strong>Save night</strong>. The night moves from Upcoming to <strong>Past nights</strong> on the Events page, and the next upcoming night takes over the homepage and the ticket button automatically.</li>
+  <li>Scroll to <strong>Photographs</strong> and upload up to ten (see 4.6).</li>
+</ol>
+<p>Once a past night has at least one photograph it appears on the Gallery page and, if it is the most recent past night with photos, in the homepage photo block.</p>
+
+<h3>4.6 Photographs</h3>
+<p><strong>Choosing photos</strong></p>
+<ul>
+  <li>Up to <strong>ten</strong> per night. The eleventh is refused — remove one first.</li>
+  <li>Pick photos with lots of people, hands up, the room full. Crowd shots work better than DJ close-ups.</li>
+  <li>Use JPG or PNG. Aim for 1–3 MB each; phones and cameras usually export within this range. Very large files (over 10 MB) upload slowly.</li>
+  <li>Landscape (wider than tall) suits the layout best. One or two portrait shots are fine.</li>
+  <li>Make sure you have the photographer's permission to use the images.</li>
+</ul>
+<p><strong>Adding a photo</strong></p>
+<ol class="step">
+  <li>Open the night and scroll to <strong>Photographs (n/10)</strong>.</li>
+  <li>Under <strong>Add a photograph</strong>, choose the file.</li>
+  <li>Optionally type a <strong>Caption</strong> (a few words: “The floor at midnight”).</li>
+  <li>Click <strong>Upload</strong>. “Photograph added.” confirms it.</li>
+</ol>
+<p><strong>Ordering.</strong> The first photograph is the largest on the public page and is the one used on the Events page strip and the homepage. Put your strongest shot first. Use <strong>Move earlier</strong> and <strong>Move later</strong> to change the order.</p>
+<p><strong>Captions.</strong> Edit the caption under any photo and click <strong>Save caption</strong>. Captions are optional and show in the full-screen viewer.</p>
+<p><strong>Removing.</strong> Click <strong>Remove</strong> under the photo. This is immediate and cannot be undone — keep your originals.</p>
+
+<h2>5. Monthly check (10 minutes)</h2>
+<ul>
+  <li>Open goldcodeevents.com on your phone. Does the homepage show the right next event? Does <strong>Get tickets</strong> open the right Humanitix page?</li>
+  <li>Open the manager page. Any night that has happened but still shows <strong>Upcoming</strong>? Tick <strong>This night has passed</strong> and save.</li>
+  <li>Any past night with 0 photos? Add some.</li>
+  <li>Any <strong>Draft</strong> that should be live, or a stale draft to tidy?</li>
+  <li>Spot-check a past night's page and the Gallery page.</li>
+</ul>
+
+<h2>6. If something goes wrong</h2>
+<table>
+  <thead><tr><th>What you see</th><th>What it means</th><th>What to do</th></tr></thead>
+  <tbody>
+    <tr><td>“Sign in as the Event Manager.”</td><td>Your session expired.</td><td>Sign out and sign in again.</td></tr>
+    <tr><td>“This account cannot edit events.”</td><td>You are signed in with an account that is not the manager.</td><td>Sign out and use the manager username.</td></tr>
+    <tr><td>“A night needs a title and a name.”</td><td>Title or Short name is empty.</td><td>Fill both and save again.</td></tr>
+    <tr><td>“This night already has ten photographs.”</td><td>The ten-photo limit.</td><td>Remove one, then upload.</td></tr>
+    <tr><td>“Choose a photograph.”</td><td>You clicked Upload without picking a file.</td><td>Pick a file first.</td></tr>
+    <tr><td>Change saved but the public page looks old</td><td>Your browser cached the page.</td><td>Refresh the page (pull down on mobile, Ctrl+F5 on desktop).</td></tr>
+    <tr><td>Page will not load at all</td><td>Hosting or database issue.</td><td>Contact your developer. Nothing you did on the manager page can take the site down.</td></tr>
+  </tbody>
+</table>
+
+<h2>7. Good habits</h2>
+<ul>
+  <li><strong>Use the manager page only.</strong> Do not ask anyone to “edit the code” for event text; everything about a night is in the form.</li>
+  <li><strong>Draft first, publish when complete.</strong> Visitors should never see a night with no date or venue.</li>
+  <li><strong>One source of truth for dates.</strong> If the date changes, change it here the same day you change it on Humanitix and Instagram.</li>
+  <li><strong>Keep the password private.</strong> Change it if you suspect anyone else has it; ask your developer how.</li>
+  <li><strong>Keep photo originals</strong> on your own drive or cloud. The website is a display, not a backup.</li>
+</ul>
+
+<h2>8. Contact</h2>
+<p>For anything outside the manager page — design changes, the About page, new features, access problems — contact your developer at <strong>codespecs.net</strong>.</p>
+
+<footer class="note">GoldCode Events · Website owner's guide · Version 1 · October 2026 · codespecs.net</footer>
+</body>
+</html>
